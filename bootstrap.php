@@ -33,7 +33,26 @@ if (is_readable($configFile)) {
 //      Se guarda la configuracion de Slim
 //      en $config['app'], el cual es utilizado
 //      para el constructor de nuestra App
-$app = new API/Application($config['app']);
+$app = new Application($config['app']);
+
+/*
+// Only invoked if mode is "production"
+$app->configureMode('production', function () use ($app) {
+    $app->config(array(
+        'log.enable' => true,
+        'log.level' => \Slim\Log::WARN,
+        'debug' => false
+    ));
+});
+// Only invoked if mode is "development"
+$app->configureMode('development', function () use ($app) {
+    $app->config(array(
+        'log.enable' => true,
+        'log.level' => \Slim\Log::DEBUG,
+        'debug' => false
+    ));
+});
+*/
 
 //Escribe el log de nuestra REST-API-practica
 $log = $app->getLog();
@@ -50,9 +69,10 @@ try
       \ORM::configure('password',$config['db']['password']);
     }
   } 
-} catch (Exception $e) {
+} catch (\PDOException $e) {
     $log->error($e->getMessage());
 }
+
 // Cache Middleware (inner)
 $app->add(new API\Middleware\Cache('/api/v1'));
 // Parses JSON body
