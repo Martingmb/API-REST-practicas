@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "slim/slim": "*",
+        "slim/slim": "^3.0",
         "slim/extras": "*",
         "slim/middleware": "*",
         "monolog/monolog": "*",
