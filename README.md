@@ -5,9 +5,9 @@ Contacts
 
         URL                         Http                    Descripción
     /api/contact                    Get                Regresa un Array de Contactos
-    /api/contact                    Get                Agregamos contacts y regresamos un id
-    /api/contact /:id               Post               Hace parcialmente un update del contacto donde cambia el id
-    /api/contact /:id               Patch              Hace un update TOTAL
+    /api/contact                    Post               Agregamos contacts y regresamos un id
+    /api/contact /:id               Patch              Hace parcialmente un update del contacto donde cambia el id
+    /api/contact /:id               Put                Hace un update TOTAL
 
 ===========================================================================================================
 

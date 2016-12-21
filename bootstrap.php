@@ -50,5 +50,5 @@ try {
 
 // Add middleware
 // Your middleware here...
-$app->add(new Some\Middleware\Class(...));
+//$app->add(new Some\Middleware\Class(...));
 ?>
