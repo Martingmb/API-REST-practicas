@@ -1,11 +1,15 @@
 {
-    "name": "yourname/my-contacts",
-    "description": "Simple RESTful API for contacts management",
+    "name": "Martin Moreno y Miguel Rocha/REST-API-practica",
+    "description": "RESTful API para practicar",
     "license": "MIT",
     "authors": [
         {
-            "name": "Your Name",
-            "email": "you@yourdomain.com"
+            "name": "Martin Moreno",
+            "email": "martingmb@outlook.com"
+        },
+        {
+            "name": "Miguel Rocha",
+            "email": "marochac96@gmail.com"
         }
     ],
     "require": {
